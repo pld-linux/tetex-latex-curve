@@ -3,7 +3,7 @@
 %define	texhash		[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 
 Summary:	LaTeX2e package for typesetting Curricula Vitae
-Summary(pl.UTF-8):   Pakiet LaTeX2e do składania życiorysów (Curricula Vitae)
+Summary(pl.UTF-8):	Pakiet LaTeX2e do składania życiorysów (Curricula Vitae)
 Name:		tetex-latex-%{short_name}
 Version:	1.0.0
 Release:	1
