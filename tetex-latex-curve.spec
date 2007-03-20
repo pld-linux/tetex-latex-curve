@@ -3,7 +3,7 @@
 %define	texhash		[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 
 Summary:	LaTeX2e package for typesetting Curricula Vitae
-Summary(pl.UTF-8):	Pakiet LaTeX2e do skÅ‚adania Å¼yciorysÃ³w (Curricula Vitae)
+Summary(pl):	Pakiet LaTeX2e do sk³adania ¿yciorysów (Curricula Vitae)
 Name:		tetex-latex-%{short_name}
 Version:	1.0.0
 Release:	1
@@ -31,14 +31,14 @@ case that you want to maintain slightly divergent versions of your CV
 at the same time, in order to emphasize on different aspects of your
 background.
 
-%description -l pl.UTF-8
-Klasa CurVe ma za zadanie uÅ‚atwiaÄ‡ Å¼ycie podczas pisania Å¼yciorysÃ³w
-(CV). UdostÄ™pnia zestaw komend do tworzenia rubryk i wpisÃ³w w nich.
-CurVe moÅ¼e prawidÅ‚owo sformatowaÄ‡ CV (rozdzielajÄ…c je na kilka stron,
-powtarzajÄ…c tytuÅ‚y itp), co jest mÄ™czÄ…cÄ… czÄ™Å›ciÄ… pisania CV. KolejnÄ…
-miÅ‚Ä… wÅ‚aÅ›ciwoÅ›ciÄ… CurVe jest Å‚atwe zarzÄ…dzanie kilkoma rÃ³Å¼nymi CV na
-raz - co jest czÄ™sto wykorzystywane w sytuacji gdy naleÅ¼y uÅ¼ywaÄ‡ kilku
-rÃ³Å¼nych wersji CV w zaleÅ¼noÅ›ci od potrzeb.
+%description -l pl
+Klasa CurVe ma za zadanie u³atwiaæ ¿ycie podczas pisania ¿yciorysów
+(CV). Udostêpnia zestaw komend do tworzenia rubryk i wpisów w nich.
+CurVe mo¿e prawid³owo sformatowaæ CV (rozdzielaj±c je na kilka stron,
+powtarzaj±c tytu³y itp), co jest mêcz±c± czê¶ci± pisania CV. Kolejn±
+mi³± w³a¶ciwo¶ci± CurVe jest ³atwe zarz±dzanie kilkoma ró¿nymi CV na
+raz - co jest czêsto wykorzystywane w sytuacji gdy nale¿y u¿ywaæ kilku
+ró¿nych wersji CV w zale¿no¶ci od potrzeb.
 
 %prep
 %setup -q -n %{short_name}
