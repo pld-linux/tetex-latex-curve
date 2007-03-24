@@ -5,12 +5,12 @@
 Summary:	LaTeX2e package for typesetting Curricula Vitae
 Summary(pl.UTF-8):	Pakiet LaTeX2e do składania życiorysów (Curricula Vitae)
 Name:		tetex-latex-%{short_name}
-Version:	1.0.0
+Version:	1.12
 Release:	1
 License:	LaTeX Project Public License
 Group:		Applications/Publishing/TeX
-Source0:	ftp://tug.ctan.org/pub/tex-archive/macros/latex/contrib/%{short_name}.zip
-# Source0-md5:	0d246701a2ccba0e073f5c18c3d51de2
+Source0:	http://www.lrde.epita.fr/~didier/comp/development/curve.tar.bz2
+# Source0-md5:	608c631b6627fbd589bac67cd988c734
 BuildRequires:	tetex-format-latex
 BuildRequires:	unzip
 Requires(post,postun):	/usr/bin/texhash
@@ -46,6 +46,7 @@ różnych wersji CV w zależności od potrzeb.
 %build
 latex curve.ins
 latex curve.dtx
+latex curve.dtx	# yes, twice
 
 %install
 rm -rf $RPM_BUILD_ROOT
