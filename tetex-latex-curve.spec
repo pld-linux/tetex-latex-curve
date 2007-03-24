@@ -52,7 +52,7 @@ latex curve.dtx	# yes, twice
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 
-install *.cls *.tex *.dvi $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+install %{short_name}{.cls,.dvi} $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
