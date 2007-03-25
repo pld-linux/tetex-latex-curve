@@ -6,7 +6,7 @@ Summary:	LaTeX2e package for typesetting Curricula Vitae
 Summary(pl.UTF-8):	Pakiet LaTeX2e do składania życiorysów (Curricula Vitae)
 Name:		tetex-latex-%{short_name}
 Version:	1.12
-Release:	1
+Release:	2
 License:	LaTeX Project Public License
 Group:		Applications/Publishing/TeX
 Source0:	http://www.lrde.epita.fr/~didier/comp/development/curve.tar.bz2
@@ -50,9 +50,10 @@ latex curve.dtx	# yes, twice
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+install -d $RPM_BUILD_ROOT{%{_datadir}/texmf/tex/latex/%{short_name},%{_examplesdir}/%{name}-%{version}}
 
-install %{short_name}{.cls,.dvi} $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+install *.cls $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+install *.tex $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,5 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS rubric.tex cv.tex
+%doc README NEWS %{short_name}.dvi
 %{_datadir}/texmf/tex/latex/%{short_name}
+%{_examplesdir}/%{name}-%{version}
